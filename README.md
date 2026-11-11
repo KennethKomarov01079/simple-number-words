@@ -40,3 +40,10 @@ prefixed with `negative`. Zero is `zero`.
 
 Throws `TypeError` for non-numbers, `NaN`, and infinities. Throws
 `RangeError` for non-integers and for integers outside the safe range.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
