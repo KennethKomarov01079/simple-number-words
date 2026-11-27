@@ -1,6 +1,6 @@
 {
   "name": "simple-number-words",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turns safe integers into their English word form.",
   "type": "module",
   "main": "src/index.js",
